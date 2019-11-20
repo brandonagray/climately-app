@@ -1,0 +1,37 @@
+.form-container {
+  padding: 8px;
+}
+
+form {
+  display: flex;
+}
+
+input[type="search" i] {
+  padding: 8px;
+  border: none;
+  border-radius: 10px 0 0 10px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.25);
+  color: white;
+  caret-color: white;
+}
+
+.search-button {
+  padding: 8px;
+  color: white;
+  cursor: pointer;
+  border-radius: 0 15px 15px 0;
+}
+
+::-webkit-input-placeholder {
+  color: white;
+}
+::-moz-placeholder {
+  color: white;
+}
+:-ms-input-placeholder {
+  color: white;
+}
+::placeholder {
+  color: white;
+}

@@ -1,0 +1,24 @@
+unit-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-radius: 8%;
+  padding: 2px;
+}
+
+.unit-value {
+  padding: 8px;
+  margin: 0px 2px;
+  border-radius: 8%;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: white;
+}
+
+.unit-value:hover {
+  transition: all 0.3s;
+}
+
+.active-unit {
+  font-weight: bold;
+}
