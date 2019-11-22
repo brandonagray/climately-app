@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/climately-app/static/css/main.24549e1f.chunk.css",
+    "main.css": "/climately-app/static/css/main.249cfdaa.chunk.css",
     "main.js": "/climately-app/static/js/main.eb4a0661.chunk.js",
     "main.js.map": "/climately-app/static/js/main.eb4a0661.chunk.js.map",
     "runtime-main.js": "/climately-app/static/js/runtime-main.e0d48f58.js",
@@ -9,16 +9,16 @@
     "static/js/2.43c5e286.chunk.js": "/climately-app/static/js/2.43c5e286.chunk.js",
     "static/js/2.43c5e286.chunk.js.map": "/climately-app/static/js/2.43c5e286.chunk.js.map",
     "index.html": "/climately-app/index.html",
-    "precache-manifest.e5f009ab6048f9c8c7de95000b7505af.js": "/climately-app/precache-manifest.e5f009ab6048f9c8c7de95000b7505af.js",
+    "precache-manifest.287b25a47a0a5c33927872c95af3f706.js": "/climately-app/precache-manifest.287b25a47a0a5c33927872c95af3f706.js",
     "service-worker.js": "/climately-app/service-worker.js",
     "static/css/2.9d04c5f8.chunk.css.map": "/climately-app/static/css/2.9d04c5f8.chunk.css.map",
-    "static/css/main.24549e1f.chunk.css.map": "/climately-app/static/css/main.24549e1f.chunk.css.map"
+    "static/css/main.249cfdaa.chunk.css.map": "/climately-app/static/css/main.249cfdaa.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.e0d48f58.js",
     "static/css/2.9d04c5f8.chunk.css",
     "static/js/2.43c5e286.chunk.js",
-    "static/css/main.24549e1f.chunk.css",
+    "static/css/main.249cfdaa.chunk.css",
     "static/js/main.eb4a0661.chunk.js"
   ]
 }
