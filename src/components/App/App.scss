@@ -177,10 +177,65 @@ $backgrounds: (
   animation: MoveClouds 200s linear infinite;
 }
 
+// If hosted on Github Pages
+.clouds1.on-github {
+  background: transparent url(/climately-app/img/clouds1.png) repeat top center;
+}
+
 .clouds2 {
   background: transparent url(/img/clouds2.png) repeat top center;
   z-index: 0;
   animation: MoveClouds 400s linear infinite;
+}
+
+// If hosted on Github Pages
+.clouds2.on-github {
+  background: transparent url(/climately-app/img/clouds2.png) repeat top center;
+}
+
+.rain {
+  z-index: 100;
+}
+.drop {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 50%);
+  background: -webkit-gradient(
+    linear,
+    0% 0%,
+    0% 100%,
+    from(rgba(255, 255, 255, 0.1)),
+    to(rgba(255, 255, 255, 0.6))
+  );
+  background: -moz-linear-gradient(
+    top,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.6) 100%
+  );
+  width: 1px;
+  height: 90px;
+  position: fixed;
+  bottom: 200px;
+  animation: fall 0.65s linear infinite;
+  -webkit-animation: fall 0.65s linear infinite;
+  -moz-animation: fall 0.65s linear infinite;
+  z-index: 100;
+}
+
+// Animate raindrops
+
+@keyframes fall {
+  to {
+    margin-top: 900px;
+  }
+}
+@-webkit-keyframes fall {
+  to {
+    margin-top: 900px;
+  }
+}
+@-moz-keyframes fall {
+  to {
+    margin-top: 900px;
+  }
 }
 
 // Generate stars

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import Slider from 'infinite-react-carousel';
+import Slider from "infinite-react-carousel";
 import Navbar from "../Navbar/Navbar";
 import CurrentForecast from "../CurrentForecast/CurrentForecast";
 import MultiDayForecast from "../MultiDayForecast/MultiDayForecast";
@@ -79,16 +79,15 @@ class App extends Component {
           const currentForecastData = this.extractDataForCurrentForecast(
             currentData
           );
-
           this.fetchLocationTime(
             currentForecastData.coords,
             currentForecastData.timestamp
           );
-
           this.setState({
             navbarData,
             currentForecastData
           });
+          this.makeItRain();
         })
         .catch(error => {
           console.log("Error:", error);
@@ -224,13 +223,13 @@ class App extends Component {
     this.setState({
       currentForecastData: currentData,
       multiDayForecastData: forecastData,
-      accentColor: color,
+      accentColor: color
     });
 
     return {
       hours,
       day,
-      date,
+      date
     };
   };
 
@@ -262,24 +261,24 @@ class App extends Component {
       humidity,
       windSpeed,
       coords,
-      timestamp,
+      timestamp
     };
   };
 
-    // Take date object or unix timestamp in ms and return day string
-    getDay = time => {
-      const daysNames = [
-        "Sunday",
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday ",
-        "Friday",
-        "Saturday",
-        "Tomorrow"
-      ];
-      return daysNames[new Date(time).getDay()];
-    };
+  // Take date object or unix timestamp in ms and return day string
+  getDay = time => {
+    const daysNames = [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday ",
+      "Friday",
+      "Saturday",
+      "Tomorrow"
+    ];
+    return daysNames[new Date(time).getDay()];
+  };
 
   extractDataForMultiDayAndGraphComponents = forecastData => {
     const multiDayForecastData = [];
@@ -305,6 +304,53 @@ class App extends Component {
     };
   };
 
+  makeItRain() {
+    let rain = document.getElementsByClassName("rain")[0];
+
+    // If raining and rain already exists
+    if (
+      this.state.currentForecastData.weatherId >= 500 &&
+      this.state.currentForecastData.weatherId <= 550 &&
+      rain.innerHTML !== ""
+    ) {
+      // Do nothing...
+    } 
+    // If raining and rain doesn't exist yet
+    else if (
+      this.state.currentForecastData.weatherId >= 500 &&
+      this.state.currentForecastData.weatherId <= 550 &&
+      rain.innerHTML === ""
+    ) {
+      var nbDrop = 800;
+
+      // Generate a random number range
+      function randomRange(minNum, maxNum) {
+        return Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
+      }
+
+      // Generate drops
+      function createRain() {
+        let screenWidth = window.screen.width;
+
+        for (let i = 1; i < nbDrop; i++) {
+          var dropLeft = randomRange(0, screenWidth);
+          var dropTop = randomRange(-1000, 1400);
+
+          rain.innerHTML += '<div class="drop" id="drop' + i + '"></div>';
+
+          let drop = document.getElementById("drop" + i);
+          drop.style.left = dropLeft + "px";
+          drop.style.top = dropTop + "px";
+        }
+      }
+      createRain();
+    } 
+    // Else clear rain
+    else {
+      rain.innerHTML = "";
+    }
+  }
+
   render() {
     const hasLatLng = this.state.latLng.length > 0;
     const hasCityOrZipcode = this.state.queryString !== "";
@@ -328,12 +374,21 @@ class App extends Component {
           />
         </div>
         <div className="app-list-graph">
-          <Slider dots wheel={true} arrows={false} autoplay={true} autoplaySpeed={5000} adaptiveHeight={true}>
+          <Slider
+            dots
+            arrows={false}
+            autoplay={true}
+            autoplaySpeed={5000}
+            adaptiveHeight={true}
+          >
             <div id="tab1">
               <MultiDayForecast data={this.state.multiDayForecastData} />
             </div>
             <div id="tab2">
-              <Graph data={this.state.graphData} accentColor={this.state.accentColor} />
+              <Graph
+                data={this.state.graphData}
+                accentColor={this.state.accentColor}
+              />
             </div>
           </Slider>
         </div>
@@ -342,8 +397,13 @@ class App extends Component {
 
     return (
       <React.Fragment>
-        { ((this.state.locationTimezoneData.hours >= 20) || (this.state.locationTimezoneData.hours <= 5)) ? <div className="stars"></div> : null }
-        { this.state.currentForecastData.weather === 'Rain' ? <div className="rain"></div> : null }
+        {this.state.locationTimezoneData.hours >= 20 ||
+        this.state.locationTimezoneData.hours <= 5 ? (
+          <div className="stars"></div>
+        ) : null}
+        {this.state.currentForecastData.weather === "Rain" ? (
+          <div className="rain"></div>
+        ) : null}
         <div
           className={`app-container hour-${
             this.state.locationTimezoneData
@@ -362,8 +422,24 @@ class App extends Component {
           </div>
           {shouldRenderApp ? mainAppLayout : instructionLayout}
         </div>
-        { (this.state.currentForecastData.weather === 'Clouds' || this.state.currentForecastData.weather === 'Rain' || this.state.currentForecastData.weather === 'Snow') ? <div className="clouds clouds1"></div> : null }
-        { (this.state.currentForecastData.weather === 'Clouds' || this.state.currentForecastData.weather === 'Rain' || this.state.currentForecastData.weather === 'Snow') ? <div className="clouds clouds2"></div> : null }
+        {this.state.currentForecastData.weather === "Clouds" ||
+        this.state.currentForecastData.weather === "Rain" ||
+        this.state.currentForecastData.weather === "Snow" ? (
+          <div
+            className={`clouds clouds1${
+              document.location.href.indexOf("github") > -1 ? " on-github" : ""
+            }`}
+          ></div>
+        ) : null}
+        {this.state.currentForecastData.weather === "Clouds" ||
+        this.state.currentForecastData.weather === "Rain" ||
+        this.state.currentForecastData.weather === "Snow" ? (
+          <div
+            className={`clouds clouds2${
+              document.location.href.indexOf("github") > -1 ? " on-github" : ""
+            }`}
+          ></div>
+        ) : null}
       </React.Fragment>
     );
   }
