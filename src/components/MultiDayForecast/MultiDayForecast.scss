@@ -13,6 +13,11 @@
 
 .multiday-forecast-container {
   display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
   flex-direction: row;
   flex-wrap: wrap;
   color: white;
@@ -21,8 +26,15 @@
 
 .single-list-item {
   display: flex;
-  flex-direction: row;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  -ms-box-orient: center;
   justify-content: center;
+  -webkit-justify-content: center;
+  flex-direction: row;
   font-size: 1rem;
   flex: 30%;
   padding: 5px;
@@ -33,8 +45,15 @@
 
 .li-info-container {
   display: flex;
-  flex-direction: column;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  -ms-box-orient: space-between;
   justify-content: space-between;
+  -webkit-justify-content: space-between;
+  flex-direction: column;
 }
 
 .single-list-item > div,

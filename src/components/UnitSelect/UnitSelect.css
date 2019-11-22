@@ -1,7 +1,14 @@
 unit-container {
   display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
   flex-direction: row;
+  -ms-box-orient: center;
   justify-content: center;
+  -webkit-justify-content: center;
   border-radius: 8%;
   padding: 2px;
 }

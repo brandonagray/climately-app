@@ -13,8 +13,15 @@
 
 .current-forecast-container {
   display: flex;
-  flex-direction: row;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  -ms-box-orient: space-evenly;
   justify-content: space-evenly;
+  -webkit-justify-content: space-evenly;
+  flex-direction: row;
   align-items: center;
   color: white;
 }
@@ -22,8 +29,15 @@
 .icon-desc-container,
 .date-container {
   display: flex;
-  flex-direction: column;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  -ms-box-orient: space-between;
   justify-content: space-between;
+  -webkit-justify-content: space-between;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -52,8 +66,15 @@
 
 .temp-container {
   display: flex;
-  flex-direction: column;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  -ms-box-orient: space-around;
   justify-content: space-around;
+  -webkit-justify-content: space-around;
+  flex-direction: column;
 }
 
 .temp-text {
@@ -63,15 +84,29 @@
 
 .high-low-container {
   display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
   flex-direction: row;
+  -ms-box-orient: space-between;
   justify-content: space-between;
+  -webkit-justify-content: space-between;
   font-size: 1rem;
 }
 
 .high-low-item {
   display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
   flex-direction: row;
+  -ms-box-orient: space-around;
   justify-content: space-around;
+  -webkit-justify-content: space-around;
   margin: 5px;
   padding: 5px;
   border-radius: 20px;
@@ -86,15 +121,29 @@
   font-size: 1rem;
   color: white;
   display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
   flex-direction: row;
+  -ms-box-orient: space-evenly;
   justify-content: space-evenly;
+  -webkit-justify-content: space-evenly;
   align-items: center;
 }
 
 .extra-info-item {
   display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
   flex-direction: row;
+  -ms-box-orient: space-around;
   justify-content: space-around;
+  -webkit-justify-content: space-around;
   padding: 5px 10px;
   margin: 5px;
   border-radius: 25px;

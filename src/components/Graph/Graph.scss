@@ -1,7 +1,13 @@
 .graph-container {
   display: flex;
-  flex-direction: column;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  -ms-box-orient: flex-end;
   justify-content: flex-end;
+  flex-direction: column;
   color: white;
   margin: 0 4em;
 }

@@ -23,17 +23,22 @@ class CurrentForecast extends Component {
     const { unit } = this.props;
     const iconClass = getIconClassName(weatherId);
     const windSpeedUnit = unit === "C" ? "m/s" : "miles/hr";
-    
+
     let accentColor = 0;
+    let dayOrNight = "";
 
     if (hours >= 0 && hours < 6) {
       accentColor = 1;
+      dayOrNight = "night";
     } else if (hours >= 6 && hours < 12) {
       accentColor = 2;
+      dayOrNight = "day";
     } else if (hours >= 12 && hours < 18) {
       accentColor = 3;
+      dayOrNight = "day";
     } else if (hours >= 18 && hours < 24) {
       accentColor = 4;
+      dayOrNight = "night";
     }
 
     return (
@@ -50,7 +55,7 @@ class CurrentForecast extends Component {
           <div className="icon-desc-container">
             <div className="icon-conatainer">
               <i
-                className={`wi wi-owm-${weatherId} weather-icon ${iconClass}`}
+                className={`wi wi-owm-${dayOrNight}-${weatherId} weather-icon ${iconClass}`}
               ></i>
             </div>
             <div className="weather-desc">{description}</div>
