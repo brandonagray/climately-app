@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1417b1b1418eb5660908956cea5adef1",
+    "revision": "088e1a84e560758d23657afb0f925717",
     "url": "/climately-app/index.html"
   },
   {
@@ -8,15 +8,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/climately-app/static/css/2.9d04c5f8.chunk.css"
   },
   {
-    "revision": "22ace1229f74601307e8",
-    "url": "/climately-app/static/css/main.1a3df57f.chunk.css"
+    "revision": "11f686703ceab646b16f",
+    "url": "/climately-app/static/css/main.e532d3f7.chunk.css"
   },
   {
     "revision": "cd20be0514fb8ded549f",
     "url": "/climately-app/static/js/2.43c5e286.chunk.js"
   },
   {
-    "revision": "22ace1229f74601307e8",
+    "revision": "11f686703ceab646b16f",
     "url": "/climately-app/static/js/main.ff0a631f.chunk.js"
   },
   {
