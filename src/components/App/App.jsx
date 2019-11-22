@@ -328,7 +328,7 @@ class App extends Component {
           />
         </div>
         <div className="app-list-graph">
-          <Slider dots wheel={true} arrows={false} autoplay={true} autoplaySpeed={5000}>
+          <Slider dots wheel={true} arrows={false} autoplay={true} autoplaySpeed={5000} adaptiveHeight={true}>
             <div id="tab1">
               <MultiDayForecast data={this.state.multiDayForecastData} />
             </div>

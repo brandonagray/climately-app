@@ -26,8 +26,9 @@ class MultiDayForecast extends Component {
       />
     ));
     return (
-      <div className="multiday-forecast-container">
-        {items}
+      <div>
+        <p className="multiday-forecast-info">6-Day Forecast</p>
+        <div className="multiday-forecast-container">{items}</div>
       </div>
     );
   }

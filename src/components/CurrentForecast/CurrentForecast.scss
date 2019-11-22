@@ -34,7 +34,6 @@
 .weather-icon,
 .weather-desc {
   margin: 10px 0px;
-  padding: 10px;
 }
 
 .weather-icon {
@@ -66,7 +65,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .high-low-item {
@@ -84,7 +83,7 @@
 }
 
 .extra-info-container {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: white;
   display: flex;
   flex-direction: row;
@@ -149,10 +148,11 @@
   .extra-info-item {
     flex: 30%;
   }
+  
 }
 @media all and (max-width: 480px) {
   .current-forecast-container {
-    flex-direction: column;
+    flex-direction: row;
   }
 
   .extra-info-container {
@@ -161,5 +161,21 @@
 
   .extra-info-item {
     flex: 100%;
+  }
+
+  .weather-icon {
+    font-size: 6em;
+  }
+
+  .temp-text {
+    font-size: 6rem;
+  }
+
+  .multiday-forecast-container {
+    margin: 0 0!important;
+  }
+
+  .single-list-item {
+    flex: 30% 1!important;
   }
 }

@@ -59,14 +59,11 @@
   text-transform: capitalize;
 }
 
-
 .multiday-forecast-info {
   align-self: center;
-  margin: 10px;
-}
-
-.multiday-forecast-info > span {
-  padding: 4px;
+  margin: 1em;
+  color: #FFFFFF;
+  text-align: center;
 }
 
 @media all and (max-width: 480px) {
