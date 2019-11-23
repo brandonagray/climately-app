@@ -376,9 +376,7 @@ class App extends Component {
         <div className="app-list-graph">
           <Slider
             dots
-            arrows={false}
-            autoplay={true}
-            autoplaySpeed={5000}
+            arrows={true}
             adaptiveHeight={true}
           >
             <div id="tab1">
