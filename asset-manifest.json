@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/climately-app/static/css/main.205a649d.chunk.css",
-    "main.js": "/climately-app/static/js/main.2c6fa276.chunk.js",
-    "main.js.map": "/climately-app/static/js/main.2c6fa276.chunk.js.map",
+    "main.css": "/climately-app/static/css/main.1e714cb5.chunk.css",
+    "main.js": "/climately-app/static/js/main.d071b050.chunk.js",
+    "main.js.map": "/climately-app/static/js/main.d071b050.chunk.js.map",
     "runtime-main.js": "/climately-app/static/js/runtime-main.e0d48f58.js",
     "runtime-main.js.map": "/climately-app/static/js/runtime-main.e0d48f58.js.map",
     "static/css/2.9d04c5f8.chunk.css": "/climately-app/static/css/2.9d04c5f8.chunk.css",
     "static/js/2.43c5e286.chunk.js": "/climately-app/static/js/2.43c5e286.chunk.js",
     "static/js/2.43c5e286.chunk.js.map": "/climately-app/static/js/2.43c5e286.chunk.js.map",
     "index.html": "/climately-app/index.html",
-    "precache-manifest.479286a6cd3a955badfee5732f9c921f.js": "/climately-app/precache-manifest.479286a6cd3a955badfee5732f9c921f.js",
+    "precache-manifest.56133d4b37024536b3730ac7d8829878.js": "/climately-app/precache-manifest.56133d4b37024536b3730ac7d8829878.js",
     "service-worker.js": "/climately-app/service-worker.js",
     "static/css/2.9d04c5f8.chunk.css.map": "/climately-app/static/css/2.9d04c5f8.chunk.css.map",
-    "static/css/main.205a649d.chunk.css.map": "/climately-app/static/css/main.205a649d.chunk.css.map"
+    "static/css/main.1e714cb5.chunk.css.map": "/climately-app/static/css/main.1e714cb5.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.e0d48f58.js",
     "static/css/2.9d04c5f8.chunk.css",
     "static/js/2.43c5e286.chunk.js",
-    "static/css/main.205a649d.chunk.css",
-    "static/js/main.2c6fa276.chunk.js"
+    "static/css/main.1e714cb5.chunk.css",
+    "static/js/main.d071b050.chunk.js"
   ]
 }
